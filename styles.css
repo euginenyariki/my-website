@@ -1,0 +1,28 @@
+:root{--bg:#eef1f5;--panel:#fff;--ink:#14202e;--muted:#6b7785;--line:#dde3ea;--accent:#3730a3;--soft:#e8e7ff;--shadow:0 8px 26px rgba(20,35,60,.07)}
+*{box-sizing:border-box}body{margin:0;font:14px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+.bar{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--line);padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px;display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none}.brand span{color:var(--accent)}.brand em{font-style:normal;font-weight:500;color:var(--muted);font-size:13px}
+.bar-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border-radius:9px;padding:9px 14px;font:inherit;font-weight:600;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:#fff}.btn.ghost{background:transparent;color:var(--accent)}
+.workspace{display:grid;grid-template-columns:minmax(340px,460px) 1fr;gap:24px;max-width:1500px;margin:auto;padding:24px;align-items:start}
+.editor{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+.editor-head h1{margin:0;font-size:20px}.editor-head p{margin:4px 0 18px;color:var(--muted);font-size:12px}
+fieldset{border:0;border-top:1px solid var(--line);padding:16px 0 4px;margin:0}
+legend{width:100%;font-weight:700;font-size:14px;padding-top:16px;display:flex;justify-content:space-between;align-items:center}
+.add{background:var(--soft);color:var(--accent);border:0;border-radius:7px;padding:5px 10px;font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+label{display:block;color:var(--muted);font-size:12px;margin-bottom:12px}
+input,textarea,select{display:block;width:100%;margin-top:5px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--ink);font:inherit;outline:none;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.item{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px}
+.item-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.item-top strong{font-size:12px;color:var(--accent)}
+.remove{background:none;border:0;color:#b91c1c;cursor:pointer;font-size:13px}
+.preview-wrap{position:sticky;top:84px;min-width:0}.preview-label{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:8px}.preview-label span{color:var(--accent)}
+.resume{background:#fff;color:#1a2431;min-height:700px;padding:48px 52px;border-radius:6px;box-shadow:0 12px 40px rgba(20,35,60,.14);font-size:12px;line-height:1.5}
+.resume h1{font-size:30px;line-height:1.1;margin:0 0 4px;letter-spacing:-.03em}.resume .headline{font-size:16px;color:var(--accent);font-weight:600;margin:0 0 8px}
+.resume .contact{color:#5b6875;font-size:11px;margin:0 0 20px}.resume h2{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);border-bottom:1px solid #dfe4ea;padding-bottom:4px;margin:22px 0 10px}
+.resume .summary{margin:0 0 12px}.entry{margin-bottom:14px}.entry-head{display:flex;justify-content:space-between;gap:12px}.entry-head strong{font-size:13px}.entry-head span{color:#6b7785;font-size:11px}.entry-sub{color:#5b6875;margin:1px 0 4px;font-size:11px}.entry ul{margin:4px 0 0;padding-left:16px}.entry li{margin-bottom:2px}
+.resume .skills{display:flex;flex-wrap:wrap;gap:6px}.resume .chip{background:#eef0ff;color:#3730a3;padding:3px 8px;border-radius:5px;font-size:11px}
+.resume .placeholder{color:#9aa4af;font-style:italic}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,80px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:9px;opacity:0;transition:.25s;z-index:20}.toast.show{transform:translate(-50%,0);opacity:1}
+@media(max-width:1000px){.workspace{grid-template-columns:1fr}.preview-wrap{position:static}.resume{padding:28px}.row{grid-template-columns:1fr}}
+@media print{body{background:#fff}.bar,.editor,.preview-label,.toast{display:none!important}.workspace{display:block;padding:0}.preview-wrap{position:static}.resume{box-shadow:none;border-radius:0;padding:0;min-height:0}}
